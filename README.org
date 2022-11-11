@@ -12,6 +12,6 @@
 * Chapter 1 Intro
 
 [[https://github.com/talkpython/100daysofweb-with-python-course][Course_repo 100daysofweb-with-python-course]]
-[[https://codechalleng.es/100days/8261][PybytesChallenge]]
+[[https://codechalleng.es/100days/8261][PybytesChallenge 100DaysOfWeb]]
 
 * Chapter 2 Flask Intro
