@@ -1,0 +1,16 @@
+* 100 days of code with Python
+
+*Goal*:
+1. Do 1h every two days
+2. Take Notes, Try to organize (maybe use Org-Roam at the end)
+3. Create Kata Repo for reoccuring tasks in python
+
+** Infos
+
+[[https://github.com/talkpython/100daysofcode-with-python-course][Course_repo]]
+
+* Chapter 1 Intro
+
+[[https://github.com/talkpython/100daysofweb-with-python-course][Course_repo 100daysofweb-with-python-course]]
+
+* Chapter 2 Flask Intro
