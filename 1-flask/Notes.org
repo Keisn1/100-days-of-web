@@ -38,4 +38,7 @@ Therein we create Flask-application *appp* and also the routes are imported
 1. Installed in venv
 2. Create .flaskenv file
 
+** Creating HTML
+
+Don't write into routes file -> create HTML file
 
