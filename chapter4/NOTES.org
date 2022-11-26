@@ -1,0 +1,52 @@
+* API's
+
+Control Access to Backend
+- Authentication
+- Validation
+- persist (DB modify)
+
+** Mockaroo
+
+[[https://mockaroo.com/][Fake Data Generator - Mockaroo]]
+
+** API Star
+
+inherent from types.Type (apistar module) we get validation and serialization
+Validators:
+- String
+- Integer
+[[https://docs.apistar.com/type-system/][ApiStar-Typesystem]]
+
+Instantiate an App (giving it the routes)
+Launch App Server
+
+Routes
+- Endpoint
+- Method
+- handler
+
+Write API methods
+
+Serialization
+- e.g it transforms a dict with key values in a serialized opbject that can be returned from the API
+  [[https://en.wikipedia.org/wiki/Serialization][Serialization]]
+  - In computing, serialization (or serialisation) is the process of translating a data structure or
+    object state into a format that can be stored (e.g. files in secondary storage devices, data
+    buffers in primary storage devices) or transmitted (e.g. data streams over computer networks)
+    and reconstructed later (possibly in a different computer environment) 
+
+** Testing with Pytest
+
+ Testing with pytest as usual
+
+ ApiStar provides a client that let's you run the app and have status code and json response to
+ assert against
+
+ test_functions
+ - test_list_cars
+ - test_create_car
+ - test_create_car missing field
+ - test_create_car missing field validation
+ - test_get_car
+ - test_get_car not found
+ - test_update_car
