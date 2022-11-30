@@ -1,0 +1,74 @@
+* {
+    font-family: arial;
+    text-align: center;
+}
+
+/* attribute selector */
+/* input[type] { */
+/*     border: 2px solid orangered; */
+/* } */
+
+/* selection by attribute value */
+input[type="text"] {
+    border: 4px solid brown;
+    background-color: palegreen;
+}
+
+input[type="email"] {
+    background-color: aqua;
+}
+
+input[type="button"] {
+    background-color: dodgerblue;
+    background-color: 2 px solid green;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Attributes start with */
+p[title^="I"] { /*case sensitive*/
+    color: antiquewhite;
+}
+
+/* Attributes ends with */
+p[title$="fox"] {
+    color: yellow;
+}
+
+/* Attribute contains word */
+p[title~="dreamer"] {
+    text-decoration: underline;
+}
+
+
+h2 {
+    color: darkblue;
+    font-size: 30px;
+    border: 1px solid green;
+    background-color: white;
+}
+
+p {
+    color: purple;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+   /* font-size: 50px; */
+   /* text-shadow: 3px 3px 5px grey; */
+}
+
+#id { /**/
+    color: forestgreen;
+    font-family: monospace;
+}
+
+.class {
+    color: dodgerblue;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+body {
+    background-color: skyblue;  /*This is a comment*/
+}
+

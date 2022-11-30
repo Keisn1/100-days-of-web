@@ -1,0 +1,49 @@
+[[https://www.youtube.com/playlist?list=PL7TLF4T4Tq2RCWa-ZRkEWXVtXteyZ2CjK][CssFullTutorial]]
+* Linking
+[[https://www.youtube.com/watch?v=H_QalUqonfc&list=PL7TLF4T4Tq2RCWa-ZRkEWXVtXteyZ2CjK&index=2][Linking CSS]]
+#+begin_export html
+  <link rel="stylesheet" href="style.css">
+#+end_export
+
+* Syntax
+[[https://www.youtube.com/watch?v=KjfjCnu64tc&list=PL7TLF4T4Tq2RCWa-ZRkEWXVtXteyZ2CjK&index=3][CSS_Syntax]]
+- *Selector*
+  + points to Html element
+  + {} for the *Declaration Block*
+    1. Property
+       - thing you want to change to a certain style
+    2. Value
+       - the style itself
+    #+begin_src css
+      h2 {color: darkblue; font-size: 30px;}
+      body {
+          background-color: skyblue;  /*This is a comment*/
+      }
+    #+end_src
+
+* Selectors
+
+** Simple Selectors
+
++ *Id-Selector*Only always have ONE occurrence of a given ID-NAME
++ *Class-Selector* - used to style mutliple elements with same styles
++ *Universal-Selector* via * - *ALL Selector*
+
+** Attribute Selector
+
+[[https://www.youtube.com/watch?v=Dm_38sQiaI4&list=PL7TLF4T4Tq2RNvYzF45yOeFi-O1KRAWtu&index=4&ab_channel=DevDreamer][elements_and_attributes_in_html]]
+#+begin_export html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <p>Dev Dreamer</p> <!-- Paragraph element -->
+  <p title="hey there!">html</p> <!-- title is an attribute -->
+  <h1>this is an h1 tag</h1>
+  <a href="http;//www.google.com" target="_blank">Click me to go to google</a>
+  <body></body>
+</html>
+#+end_export
+- some attributes
+  - anker tag a -> attribute href e.g.
+
+- 
