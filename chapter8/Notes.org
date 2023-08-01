@@ -1,0 +1,36 @@
+* JavaScript
+
+** How to run
+- Node
+- with html and in console
+- in pycharm
+
+** var and let
+- var is global
+- let is block scoped
+
+** Primitives
+- Boolean
+- null
+- undefined
+- Number
+- string
+- Symbol
+
+** Objects
+- dict to classes
+-
+
+** Type casting
+- JavaScript is extremely permissive when adding types together
+
+** Arrays
+- look at script
+
+** For loop
+- like C
+** Conditionals
+** Comparison
+- === checks for equality and same type
+** Objects
+- everything is an object
