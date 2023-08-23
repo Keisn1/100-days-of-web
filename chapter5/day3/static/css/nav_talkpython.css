@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+}
+
+.custom-bar {
+    background-color: #222;
+    box-sizing: border-box;
+    margin: 0;
+    border-top: 0;
+    padding: 0;
+
+}
+
+.custom-bar li {
+    display: inline-block;
+    padding: 20px;
+    font-size: 22px;
+}
+
+.custom-bar a{
+    color: white;
+}
+
+#TalkPython {
+    padding-left: 20px;
+    padding-left: 20px;
+}

@@ -1,10 +1,129 @@
 [[https://www.youtube.com/playlist?list=PL7TLF4T4Tq2RCWa-ZRkEWXVtXteyZ2CjK][CssFullTutorial]]
+* General
+[[https://www.csszengarden.com/][CSSZenGarden]]
+- CSS is styling HTMLmarkup that contains content
+  - look and feel seperated from content
+** Structure
+- /static/site.css
+  - needs to be included via
+    #+begin_export html
+    <link rel="stylesheet" href="/static/style.css">
+    #+end_export
+  - don't confuse with JavaScript (src=""
+** Styling tags
+- styling tags like body, div, a, tg
+  #+begin_export css
+    body {                          /* target a known html node by name */
+        background-color: #ccc;
+        color: #222;
+    }
+  #+end_export
+- target by html name
+- target by class (i.e. .content)
+- express hierarchies
+  - .nav ul.dropdown > #profile_image
+    - > means contained in
+    - class nav
+    - ul unordered list
+      - ul has to have class dropdown
+- #name maps to <p id="name">
+- combining without Spaces means AND Operation ((in a sense of *Inheritance* and
+  /Overriding/))
+  - .content.lead
+  - element class equals content.lead
+- Cascading
+  - more specific styles will override the other ones
+** Box Model
+- Spacing and Padding around an Html Element
+- Content is contained in a container
+- margin
+- padding
+- border
+- can be seen inside CSS design tools inside the browser
+- doesn't apply to inline display (i.e. display: inline)
+*** Controlling the box in CSS
+#+begin_export css
+.lead {
+    display: block;             /*Cannot be inline*/
+    padding: 5px;
+    padding-left: 10px;
+    margin: 5px;
+    border: 1px solid gray;
+}
+#+end_export
+** Floating Elements
+- Bestimmte Sachen Anordnen bspw. etwas soll links oder rechts von etwas erscheinen
+- floating elements need to preceed what they shall float around
+#+begin_export html
+<!-- float.html -->
+<head>
+<link rel="stylesheet" href="static/css/float.css">
+</head>
+<div id="top-div">
+    <img src="static/img/dunecat.png" alt="">
+    <div>This is a message</div>
+    <div style="clear:both;"><div>
+</div>
+#+end_export
+#+begin_export css
+#top-div img {
+    /*float image to the right*/
+    /*that alone would float even out of the hierarchy*/
+    /*needs to be adjusted inside the html itself*/
+    float: right;
+    height: 98px;
+}
+
+#top-div {
+    background-color: gray;
+    color: white;
+    font-size: 48px;
+    padding: 1px;
+}
+
+a {
+    font-weight: bold;
+}
+#+end_export
+** Demonstration
+*** properties
+- .custom-nav a:visited (it's like an extra property)
+  - visited hyperref
+- .custom-nav a:active
+  - clicking on it activates the link
+*** attributes
+- display
+  - inline-block (for horizontally)
+  - need to try out inline
+- font-weight
+- background-color
+- color
+- textdecoration
+- padding
+- padding right
+*** targeting
+- targeting the elements
+  - .custom-nav li
+  - .custom-nav
+  - .custom-nav a
+  - .page-content a
+** Things to explore
+*** Grid Layout
+- Mobile adaption
+*** Flexbox
+- top and bottom fixed, the rest can move
+*** Typography and Fonts
+*** Table styles
+*** Themes
+*** LESS/SASS
+- higher level languages
+*** bootstrap, other UI framework themes
+- semantic UI
 * Linking
 [[https://www.youtube.com/watch?v=H_QalUqonfc&list=PL7TLF4T4Tq2RCWa-ZRkEWXVtXteyZ2CjK&index=2][Linking CSS]]
 #+begin_export html
   <link rel="stylesheet" href="style.css">
 #+end_export
-
 * Syntax
 [[https://www.youtube.com/watch?v=KjfjCnu64tc&list=PL7TLF4T4Tq2RCWa-ZRkEWXVtXteyZ2CjK&index=3][CSS_Syntax]]
 - *Selector*
@@ -46,4 +165,7 @@
 - some attributes
   - anker tag a -> attribute href e.g.
 
-- 
+-
+
+* Day3&4
+[[https://github.com/talkpython/100daysofweb-with-python-course/tree/master/days/013-016-css-basics/your-turn][Day3&4Github]]
