@@ -1,0 +1,32 @@
+[[https://github.com/talkpython/100daysofweb-with-python-course/tree/master/days/017-020-flask-call-apis][CallingFlaskAPIChapter]]
+* Day1
+- Watching Videos
+- [[https://api.chucknorris.io/][ChuckNorrisAPI]]
+** How to parse variables from flask app through to jinja template
+- pass of datetime string to webpage
+#+begin_src python
+  render_template("index.html", time=timenow)
+#+end_src
+- timenow variable is send to jinja template, to an object named time (usually
+  named the same)
+- variable is specified outside the route
+  - timenow therefore will not change if the app is not restarted / rerun
+** Pulling data from an API
+- pulling jokes from ChuckNorris
+*** Planning
+- using API
+- split code in 2 sections
+  1. Pull the Joke (get the joke function)
+  2. Pass the Joke to the Jinja Template (Route function)
+** Base Html
+- render_template is flask command to render html with jinja 2
+* Day2
+- expanding on App
+- Creating menu bar
+- checkout list of [[https://medium.com/@vicbergquist/18-fun-apis-for-your-next-project-8008841c7be9][awesome list of APIs]]
+* Day3
+- watch remaining videos
+- PokemonAPI
+* Day4
+- continue building app
+- add error handling

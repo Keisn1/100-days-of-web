@@ -1,0 +1,44 @@
+* Creating a single File FlaskApp
+
+Ususally you keep everything in one file (e.g. routes.py)
+* Notes
+
+** [[file:program/__init__.py::app = Flask(__name__)][Usage of Name in __init__.py to build Flask app]]
+
+__name__ evaluates to
+1. name of file if imported
+2. __main__ if file is being run directly
+   https://www.geeksforgeeks.org/__name__-a-special-variable-in-python/?tab=article
+
+Tutorial on that
+[[https://codefather.tech/blog/python-__name__-flask/][What is __name__ in Flask: Let’s Learn Python Together]]
+
+
+** Order of import
+[[file:program/__init__.py::from program import routes][Routes imported after creation of FlaskApp]]
+
+** Import from init
+[[file:program/routes.py::from program import app][Import app from directory programm while app is created in __init__.py]]
+
+See how __init__.py works
+
+** Demo.py imports app
+[[file:demo.py::from program import app # from program package import the app object][# from program package import the app object]]
+We are importing something from the package "program", which leads to the execution of __init__.py
+Therein we create Flask-application *appp* and also the routes are imported
+
+** Telling Flask what to do
+*** Setting an ENVVAR called FLASK_APP
+#+begin_src bash
+   export FLASK_APP=demo.py
+#+end_src
+*** Using python-dotenv
+[[https://www.askpython.com/python/python-dotenv-module][python-dotenv-module]]
+[[https://flask.palletsprojects.com/en/2.2.x/cli/#environment-variables-from-dotenv][How Flask uses python-dotenv to env variables]]
+1. Installed in venv
+2. Create .flaskenv file
+
+** Creating HTML
+
+Don't write into routes file -> create HTML file
+

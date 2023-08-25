@@ -2,6 +2,7 @@ body {
     margin: 0;
 }
 
+<<<<<<< HEAD
 .custom-bar {
     background-color: #222;
     box-sizing: border-box;
@@ -25,3 +26,24 @@ body {
     padding-left: 20px;
     padding-left: 20px;
 }
+=======
+.topnav {
+    background-color: #222;
+    overflow: hidden;
+    padding: 22px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.topnav a {
+    font-size: 22px;
+    color: white;
+}
+
+.topnav-right {
+    float: right;
+}
+
+
+
+>>>>>>> 87f3a4d (Did go on with the challenge)
