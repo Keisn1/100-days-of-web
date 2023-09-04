@@ -1,2 +1,7 @@
 apistar==0.5.41
+colorama
 flask
+requests
+bs4
+aiohttp
+cchardet

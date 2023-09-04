@@ -1,0 +1,59 @@
+* DONE Day 9 03/09/2023 Quart Async (September 2023)
+CLOSED: [2023-09-04 Mon 12:08]
+:PROPERTIES:
+:EXPORT_FILE_NAME: day_9_quart_async
+:END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2023-09-04 Mon 12:08]
+:END:
+- watched lessons on async
+- setup a little program that simulate calls of spinning up several processes
+  that have 2 steps
+  - the 2 steps depend on another but the processes themselves are independent
+    from each other
+- implemented 2 versions of that
+  - synchronous
+    - steps are executed lineary, queued up
+    - typical stuff would be:
+      - Framework stuff
+      - Database
+      - Own code
+      - Database
+      - Framework
+  - asynchronous
+    - need to make the processes async and await certain processes
+    - what needs to be done?
+      1. Define functions =async=
+          #+begin_src python
+            async def generate_data(num: int, data: asyncio.Queue):
+          #+end_src
+      2. Inside those function there needs to be an await
+         #+begin_src python
+           await data.put((item, datetime.datetime.now()))
+         #+end_src
+         - You can use multiple awaits, we use asyncio.sleep to simulate a delay
+           #+begin_src python
+             await asyncio.sleep(random.random() + 0.5)
+           #+end_src
+      3. The =async= functions go inside a asyncio event loop as a task
+      4. We have asyncio data structure that handles data between tasks ~data
+         asyncio.Queue()~
+      5. We put all together in a final task via ~ayncio.gather~
+      6. We can run the final task inside the loop
+
+* TODO Day 10 04/09/2023 Quart Async (September 2023)
+:PROPERTIES:
+:EXPORT_FILE_NAME: day_10_quart_async
+:END:
+- [[https://github.com/talkpython/100daysofweb-with-python-course/tree/master/days/021-024-quart-async/your_turn#day-2-convert-a-sync-console--terminal-app-to-be-async][Day2 of Asyncio - Your turn]]
+
+** How does it work
+
+- we create a loop inside main
+- we put our async get_title_range inside
+- in get_title_range we create a lot of tasks
+- we await theses tasks
+  - these tasks themselves are async
+  - we have the await method inside the aiohttp block
+- so I guess the loop will have knowledge of all the awaits that is present
+  in the tree starting from the function, whose task was added

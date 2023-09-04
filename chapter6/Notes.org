@@ -1,3 +1,4 @@
+#+STARTUP: overview
 [[https://github.com/talkpython/100daysofweb-with-python-course/tree/master/days/017-020-flask-call-apis][CallingFlaskAPIChapter]]
 * Day1
 - Watching Videos
@@ -23,10 +24,59 @@
 * Day2
 - expanding on App
 - Creating menu bar
+  - I created the menu button
+  - was a change in base.html, adding a href
 - checkout list of [[https://medium.com/@vicbergquist/18-fun-apis-for-your-next-project-8008841c7be9][awesome list of APIs]]
+  - [[https://pokeapi.co/][PolemonApi]]
+    - [[https://pokeapi.co/docs/v2][docs]]
+    - you can basically recreate Pokemon game
+    - consumption only API
+  - [[http://open-notify.org/Open-Notify-API/ISS-Location-Now/][ISS-API]]
+    - API to return current location
+    - returns longitude and latitude
+  - [[https://pipedream.com/apps/swapi][StarWars API]]
+    - Here are a few examples of what developers can build using the SWAPI:
+      - Create a Star Wars encyclopedia to document the Star Wars universe and its characters.
+      - Design a custom interactive map to explore the planets of the Star Wars universe.
+      - Analyze the data to uncover patterns and insights about Star Wars films, characters, and species.
+      - Design a search engine to query Star Wars related data.
+      - Create a mobile app that displays information about the characters, films and species in the Star Wars universe.
+      - Design a live score system specialized in providing stats related to the Star Wars films and characters.
+    - [[https://developer.musixmatch.com/documentation][musixmatch]]
+      - display lyrics on website
+    - [[https://www.brewerydb.com/][breweryDB]]
+      - search for breweries near you
+      - open map data
+    - [[https://api.nasa.gov/index.html][NasaAPI]]
+    - [[http://jservice.io/][Jservice - Jeopardy game]]
+    - [[https://developer.marvel.com/][marvel_api]]
 * Day3
 - watch remaining videos
 - PokemonAPI
+** PokemonAPI
+- make calls to retreive information
+- On our website somebody wants to retreive color information
+** Implementation
+- On website we need a form to submit something
+  - POST to submit
+  - GET to pull the data
+- the form
+  - class = "mui-form"
+    - multiple input?
+  - method = "POST"
+    - needs to be post since information is sent
+** What I learned
+- How to call api
+- extract data from json
+- use python code in html
+- some html tags (thead, tbody, tr, td, br)
+- mui css template
+
 * Day4
 - continue building app
 - add error handling
+
+[[https://www.digitalocean.com/community/tutorials/how-to-use-and-validate-web-forms-with-flask-wtf][Validation]]
+
+- added error handling for not found
+- added validation with wtf_forms, flask_wtf

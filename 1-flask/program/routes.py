@@ -1,3 +1,4 @@
+import requests
 from program import app
 from flask import render_template
 
@@ -10,3 +11,17 @@ def index():                # try and name functions similar to url, route-name
 def p100Days():
     return render_template('100Days.html')
 
+
+
+@app.route('/chuck')
+def chuck():
+    joke = get_chuck_joke()
+    return render_template('chuck.html',
+                           joke=joke)
+
+
+
+def get_chuck_joke():
+    r = requests.get('https://api.chucknorris.io/jokes/random')
+    data = r.json()
+    return data['value']
