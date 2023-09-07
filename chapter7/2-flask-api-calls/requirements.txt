@@ -1,0 +1,7 @@
+requests
+quart
+quart-wtforms
+Flask-WTF
+aiohttp
+aiodns
+cchardet
