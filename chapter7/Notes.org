@@ -41,13 +41,20 @@ CLOSED: [2023-09-04 Mon 12:08]
       5. We put all together in a final task via ~ayncio.gather~
       6. We can run the final task inside the loop
 
-* TODO Day 10 04/09/2023 Quart Async (September 2023)
+* DONE Day 10 04/09/2023 Quart Async (September 2023)
+CLOSED: [2023-09-04 Mon 21:30]
 :PROPERTIES:
 :EXPORT_FILE_NAME: day_10_quart_async
 :END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2023-09-05 Tue 21:30]
+:END:
 - [[https://github.com/talkpython/100daysofweb-with-python-course/tree/master/days/021-024-quart-async/your_turn#day-2-convert-a-sync-console--terminal-app-to-be-async][Day2 of Asyncio - Your turn]]
-
+- [[https://github.com/Keisn1/100-days-of-web/blob/main/chapter7/web_crawl/async_program.py][async_program.py]]
 ** How does it work
+:LOGBOOK:
+CLOCK: [2023-09-05 Tue 14:22]--[2023-09-05 Tue 14:53] =>  0:31
+:END:
 
 - we create a loop inside main
 - we put our async get_title_range inside
@@ -57,3 +64,43 @@ CLOSED: [2023-09-04 Mon 12:08]
   - we have the await method inside the aiohttp block
 - so I guess the loop will have knowledge of all the awaits that is present
   in the tree starting from the function, whose task was added
+
+* DONE Day 11 05/09/2023 Quart Async (September 2023)
+CLOSED: [2023-09-05 Tue 21:30]
+:PROPERTIES:
+:EXPORT_FILE_NAME: day_11_quart_async
+:END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2023-09-05 Tue 21:30]
+:END:
+
+** Synchronous and Asynchronous Web API
+
+*** synchronous
+
+- using Flask and requests
+- getting weather data via '/api/weather/zip_code/country'
+- getting sun data via '/api/sun/zip_code/country'
+- translating name to coordinates
+
+*** Asynchronous
+
+- installing quart, aiohttp, aiodns, cchardet
+- translation table
+  | Flask | Quart |
+  |-------+-------|
+  | flask | quart |
+
+- make location_service async
+  - can't await request
+    - use aiohttp
+  - await asyncio.sleep
+
+- async options for other packages
+  | PostGres | AsyncPG    |
+  | mongoDB  | microMongo |
+  | redis    | aioRedis   |
+
+- using wrk to load-test the solutions
+  - big performance boost
+  - when deployed, need to be deployed with web interface that understands async
