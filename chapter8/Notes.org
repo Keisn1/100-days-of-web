@@ -171,3 +171,74 @@
       argument, it just assumed maxAttempts to be NaN inside the comparison
       (attempts == maxAttempts)
 - Have not yet done the other exercises
+* Day 3
+** Document Object Model (DOM)
+- platform- and language-neutral interface
+- will allow programs and scripts to dynamically access and update the content,
+  structure and style of a document
+- W3CDOM and WHATWG standards (browser may extend that)
+-
+** How
+- *Tree of objects*
+  - Document
+    - Root
+      - head
+        - title
+        - Text
+      - body
+        - different tags (a, href, t, h1)
+          - texts
+
+- JS can change
+  - HTML elements and attributes
+  - remove existing elements and attributes
+  - CSS styles
+  - can react to all existing HTML events
+  - can create new HTML events
+** Demo
+- Targeting elements (getElementByTagName, getElementByClassName, getElementById)
+- write new content to the page unsing innerHTML
+- append/remove elements with appendChild/removeChild
+- add color to text using element.style.color
+- add a click event (addEventListener) and open.window
+-
+*** Remarks
+- need to cast HTML Collection objects to an array, so you can do something
+  programmatically with them (i.e. list)
+- there are *silent errors*
+  - that means that you might have an error but it still compiles and you don't
+    see it immediately
+
+** Debugging in JavaScript
+- go to Sources
+- in example JS is inline
+  - setting breakpoint after calculation
+  - enter in debugger, and you have another console
+  - now you can access variables
+
+** Common JS gotchas
+- JavaScript was designed in 10 days
+*** Global Variables
+- use let and const
+*** C-style block syntax but not its block scope
+- no information hiding
+*** End of line semicolons are optional and misuse is "passed silently"
+*** 2 Equality operators
+== ... only value
+=== ... value and type
+*** 2 ways to express undefined or empty variables
+- null and undefined
+
+** Resources
+1. Javascript in 14 minutes
+2. w3schools JS Tutorial
+3. Mozilla DevDocs (/LEARN/JavaScript)
+4. Books
+   - you don't know JS
+   - JS the good parts
+   - eloquent JavaScript
+5. Specializations
+   - Serverside: Node, TypeScript
+   - Frameworks: jQuery, Angular, React, Vue
+6. Can I use.com
+   - if browser support certain features
